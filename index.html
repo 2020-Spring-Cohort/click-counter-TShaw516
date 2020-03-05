@@ -7,8 +7,22 @@
 </head>
 <body>
     <div class="container">
+        <form>
+            <input type="button" value="Click Me" onclick="addClick()">
+        </form>
+        <form>
+            <input type="button" value="Purchase a Companion" onclick="addCompanion()">
+        </form>
+        <form>
+            <input type="button" value="Purchase a Compounder" onclick="addCompounder()">
+        </form>   
         <div class="anchor"></div>
     </div>
-    <script src="/src/app.js"></script>
+    <script src="/src/js/ClickCounter.js">
+    //Hide
+    </script>
+    <p>Click Total: <a id="clicks">0</a></p>
+    <p>Companion Total: <a id="clickingCompanion">0</a></p>
+    <p>Compounder Total: <a id="compounder">0</a></p>
 </body>
 </html>
