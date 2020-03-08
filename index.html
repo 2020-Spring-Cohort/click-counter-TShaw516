@@ -8,21 +8,22 @@
 <body>
     <div class="container">
         <form>
-            <input type="button" value="Click Me" onclick="addClick()">
-        </form>
+            <input type="button" value="Click Me" onclick="addClick()" class="click">
+        </form> 
         <form>
             <input type="button" value="Purchase a Companion" onclick="addCompanion()">
-        </form>
+        </form>  
         <form>
             <input type="button" value="Purchase a Compounder" onclick="addCompounder()">
-        </form>   
+        </form> 
+        <p><a id="brokeString"></a></p>  
         <div class="anchor"></div>
     </div>
-    <script src="/src/js/ClickCounter.js">
-    //Hide
-    </script>
     <p>Click Total: <a id="clicks">0</a></p>
     <p>Companion Total: <a id="clickingCompanion">0</a></p>
     <p>Compounder Total: <a id="compounder">0</a></p>
+    <script src="/src/js/ClickCounter.js">
+        //Hide
+    </script>
 </body>
 </html>
