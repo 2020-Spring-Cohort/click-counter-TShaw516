@@ -12,7 +12,7 @@ describe('Clicking Project Tests:', () => {
                 
                 expect(underTest.getClicks()).toBe(1);
             })
-        })
+        });
     });
     
 
@@ -24,7 +24,7 @@ describe('Clicking Project Tests:', () => {
                 expect(underTest.getCompanions()).toBe(1);
             })
         });
-    })
+    });
     
     describe('Clicking compounder should increment:', () => {
         describe('When addClickingCompounder is used', function (){
@@ -35,5 +35,28 @@ describe('Clicking Project Tests:', () => {
             })
         });
     });
+
+    describe('Clicking companion cost should increase:', () => {
+        describe('When companionCostChange is used', function () {
+            it('Clicking Companion should cost 10% more', function (){
+                underTest.companionCostChange();
+
+                expect(underTest.getCompanionCost()).toBe(110)
+            })
+        });
+    
+    });
+
+    describe('Clicking compounder cost should increase:', () => {
+        describe('When compounderCostChange is used', function () {
+            it('Clicking Compounder should cost 10% more', function (){
+                underTest.compounderCostChange();
+
+                expect(underTest.getCompounderCost()).toBe(11)
+            })
+        });
+    });
+
+    
     
 });
