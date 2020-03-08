@@ -1,15 +1,26 @@
-const updateClickCounter = (clickCounterElement, clickObject) => {
-    speedometerElement.innerText = clickObject.getClicks();
+const updateClickCounter = (clickCounterElement, clickCounterObject) => {
+    clickCounterElement.innerText = clickCounterObject.getClicks();
 }
 
-const makeAddClickButton = (addClickElement, clickCounterElement, clickObject) => {
-    acceleratorElement.addEventListener('click', ()=>{
-        clickObject.addClick();
-        updateClickCounter(clickCounterElement, clickObject);
+const makeAddClickButton = (addClickElement, clickCounterElement, clickCounterObject) => {
+    addClickElement.addEventListener('click', ()=>{
+        clickCounterObject.addClick();
+        updateClickCounter(clickCounterElement, clickCounterObject);
     })
 }
 
-const addClickElement = document.querySelector('.click-counter__clicks');
+const updateCompanionCounter = (clickCounterElement, clickCounterObject) => {
+    clickCounterElement.innerText = clickCounterObject.getClicks();
+}
+
+const makeAddCompanionButton = (addClickElement, clickCounterElement, clickCounterObject) => {
+    addClickElement.addEventListener('click', ()=>{
+        clickCounterObject.addClick();
+        updateClickCounter(clickCounterElement, clickCounterObject);
+    })
+}
+
+const addClickElement = document.querySelector('.add-click__add-click');
 const addCompanionElement = document.querySelector('.add-helper__add-companion');
 const addCompounderElement = document.querySelector('.add-helper__add-compounder');
 const clickCounterElement = document.querySelector('.click-counter__clicks');
