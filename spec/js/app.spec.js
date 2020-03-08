@@ -1,94 +1,33 @@
-//describe(suite-title, callbackFunction() {})
-describe("addCounterApp", function()
-{
-/*  beforeEach(function)
-    {
-        testClicksElement = document.createElement('button')
-    }  */
+describe('app.js manipulates the DOM to reflect the status of a Car object.', () => {
+    let testClickProject;
+    let testClickCounter;
+    let testAddClick;
 
-    describe("addClick", function() 
-    {
-        it('clicks variable increments on click', function()
-        {   
-            //arrange
-            let clicks = 0;
-            //act
-            addClick();
-            //assert
-            expect(clicks).toBe(1); 
-
-        })
-
+    beforeEach(() => {
+        testClickProject = new ClickCounter();
+        testClickCounter = document.createElement('div');
+        testAddClick = document.createElement('button');
+        makeAddClickButton(testAddClick, testClickCounter, testClickProject);
     })
 
-    describe("addCompounder", function()
-    {
-        it('adds a compounder for the cost of 10 clicks', function()
-        {
-            //arrange
-            let compunderCost=10;
-            let clicks=10;
-            //act
-            addCompounder();
-            //assert
-            expect(compounder).toBe(1)
-        })
-    })
+    describe('updateClickCounter() - As each click is added, the innerText of the passed element reflects the appropriate amount of clicks.', () => {
+        it('Without clicking the click count should be 0.', () => { 
+            updateClickCounter(testClickCounter, testClickProject); 
+            expect(testClickCounter.innerText).toBe('0');
+        });
 
-    describe("addCompanion", function()
-    {
-        it('adds a companion for the cost of 100 clicks', function()
-        {
-            //arrange
-            let companion = 0
-            let clicks = 100;
-            //act
-            addCompanion();
-            //assert
-            expect(companion).toBe(1)
-        })
+        it('After clicking once the click counter should be 1.', () => {  
+            testCar.addClick();
+            updateClickCounter(testClickCounter, testClickProject); 
+            expect(testClickCounter.innerText).toBe('1');
+        });
+    });
 
-    })
 
-    describe("companionCostChange", function()
-    {
-        it('increases the cost of clicking companions for each one purchased', function()
-        {
-            //arrange
-            let clickingCompanion=1;
-            let clickCost=100;
-            //act
-            companionCostChange();
-            //assert
-            expect(clickCost).toBe(110);
-        })
-    })
 
-    describe("compounderCostChange", function()
-    {
-        it('increases the cost of clicking compounder for each one purchased', function()
-        {
-            //arrange
-            let compunder=1
-            let compounderCost=10;
-            //act
-            compounderCostChange();
-            //assert
-            expect(compounderCost / 10 + compounderCost).toBe(11);
-        })
-    })
 
-    describe("addAutoClick", function()
-    {
-        it('adds the quantity of companions to each individual click', function()
-        {
-            //arrange
-            clicks = 1;
-            clickingCompanion = 1;
-            //act
-            addAutoClicks();
-            //assert
-            expect(clicks).toBe(2);
-        })
-    })
+
+
+
+    
 });

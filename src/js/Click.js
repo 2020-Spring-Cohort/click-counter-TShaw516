@@ -18,7 +18,7 @@ class ClickCounter {
         {
         this._clicks -= 100;
         this._companion += 1;
-        this.companionCostChange();
+        //this.companionCostChange();
         }
     }
 
@@ -30,18 +30,12 @@ class ClickCounter {
         this._clicks = this._companion + clicks;
     }
 
- /*    setInterval(function addAutoClicks()
-{
-    clicks = clickingCompanion + clicks;
-},  5000); */
-
-
     addClickCompounder(){
         if(this._clicks>=this._compounderCost)
         {
         this._clicks -= 10;
         this._compounder += 1;
-        this.compounderCostChange();
+        //this.compounderCostChange();
         }
 
     }
