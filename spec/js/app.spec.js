@@ -17,17 +17,19 @@ describe('app.js manipulates the DOM to reflect the status of a Car object.', ()
         });
 
         it('After clicking once the click counter should be 1.', () => {  
-            testCar.addClick();
+            testClickProject.addClick();
             updateClickCounter(testClickCounter, testClickProject); 
             expect(testClickCounter.innerText).toBe('1');
         });
     });
 
-
-
-
-
-
-
     
+
+
+
+
+
+
+
+
 });
