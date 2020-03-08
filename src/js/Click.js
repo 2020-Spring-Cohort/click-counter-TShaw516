@@ -3,6 +3,8 @@ class ClickCounter {
         this._clicks=0;
         this._companion=0;
         this._compounder=0;
+        this._companionCost=100;
+        this._compounderCost=10;
 
     }
 
@@ -12,14 +14,19 @@ class ClickCounter {
     }
     
     addClickCompanion(){
+        if(this._clicks>=this._companionCost)
+        {
         this._clicks -= 100;
         this._companion += 1;
-
+        }
     }
 
     addClickCompounder(){
+        if(this._clicks>=this._compounderCost)
+        {
         this._clicks -= 10;
         this._compounder += 1;
+        }
 
     }
 
@@ -32,11 +39,11 @@ class ClickCounter {
 
     }
 
-    getCompanion(){
+    getCompanions(){
         return this._companion;
     }
 
-    getCompounder(){
+    getCompounders(){
         return this._compounder;
     }
 
