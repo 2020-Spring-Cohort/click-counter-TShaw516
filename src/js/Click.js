@@ -8,6 +8,7 @@ class ClickCounter {
         this._clicks+=1;
 
     }
+    
     addClickCompanion(){
         this._clicks-=100;
 

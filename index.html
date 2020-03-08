@@ -7,23 +7,15 @@
 </head>
 <body>
     <div class="container">
-        <form>
-            <input type="button" value="Click Me" onclick="addClick()" class="click">
-        </form> 
-        <form>
-            <input type="button" value="Purchase a Companion" onclick="addCompanion()">
-        </form>  
-        <form>
-            <input type="button" value="Purchase a Compounder" onclick="addCompounder()">
-        </form> 
-        <p><a id="brokeString"></a></p>  
-        <div class="anchor"></div>
+        <section class="click-counter">
+            <div class="click-counter__clicks"> Click Total </div>
+        </section>
+        <section class="add-helper">
+            <div class="add-helper__add-companion"> Add Companion </div>
+            <div class="add-helper__add-compounder"> Add Compounder </div>
+        </section>
     </div>
-    <p>Click Total: <a id="clicks">0</a></p>
-    <p>Companion Total: <a id="clickingCompanion">0</a></p>
-    <p>Compounder Total: <a id="compounder">0</a></p>
-    <script src="/src/js/ClickCounter.js">
-        //Hide
-    </script>
+    <script src="/src/js/Click.js"></script>
+    <script src="/src/js/app.js"></script>
 </body>
 </html>
