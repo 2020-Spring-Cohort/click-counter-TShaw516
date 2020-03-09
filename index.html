@@ -7,23 +7,25 @@
 </head>
 <body>
     <div class="container">
-        <form>
-            <input type="button" value="Click Me" onclick="addClick()" class="click">
-        </form> 
-        <form>
-            <input type="button" value="Purchase a Companion" onclick="addCompanion()">
-        </form>  
-        <form>
-            <input type="button" value="Purchase a Compounder" onclick="addCompounder()">
-        </form> 
-        <p><a id="brokeString"></a></p>  
-        <div class="anchor"></div>
+        <section class="click-counter">
+            <div class="click-counter__clicks"> Click Total </div>
+        </section>
+        <section class="add-click">
+            <button class="add-click__add-click"> Add Click </button>
+            <div class="add-click__click-strength"> Click Strength </div>
+            <br>
+        <section class="companion">
+            <button class="companion__add-companion"> Add Companion </button>
+            <div class = "companion__companion-cost"> Companion Cost </div>
+            <div class="companion__companion-total"> Companion Total </div>
+            <br>
+        <section class="compounder">
+            <button class="compounder__add-compounder"> Add Compounder </button>
+            <div class="compounder__compounder-cost"> Compounder Cost </div>
+            <div class="compounder__compounder-total"> Compounder Total </div>
+        </section>
     </div>
-    <p>Click Total: <a id="clicks">0</a></p>
-    <p>Companion Total: <a id="clickingCompanion">0</a></p>
-    <p>Compounder Total: <a id="compounder">0</a></p>
-    <script src="/src/js/ClickCounter.js">
-        //Hide
-    </script>
+    <script src="/src/js/Click.js"></script>
+    <script src="/src/js/app.js"></script>
 </body>
 </html>
