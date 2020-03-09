@@ -62,6 +62,16 @@ describe('Clicking Project Tests:', () => {
         });
     });
 
+    describe('Click strength will increase as compounders are added:', () => {
+        describe('When clickStrength is used', function () {
+            it('Click Strength will increase by 1.2x', function (){
+                underTest.clickStrengthChange();
+
+                expect(underTest.getClickStrength()).toBe(1.2)
+            })
+        });
+    });
+
     
     
 });
