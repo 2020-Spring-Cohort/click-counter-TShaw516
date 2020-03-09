@@ -37,10 +37,6 @@ class ClickCounter {
         this._companionCost = (this._companionCost * 0.1) + this._companionCost;
     }
 
-    addAutoClicks(){
-        this._clicks = this._companion + this._clicks;
-    }
-
     addClickCompounder(){
         if(this._clicks>=this._compounderCost)
         {

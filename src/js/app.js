@@ -10,9 +10,16 @@ const clickStrengthElement = document.querySelector('.add-click__click-strength'
 var links = document.getElementById("links");
 const appClickCounter = new ClickCounter();
 
-const autoClick = () =>{
-    setInterval((appClickCounter.addAutoClicks()), 5000)
-};
+const autoClickElement = setInterval(autoClick, 5000)
+function autoClick() {
+    clickCounterObject.addAutoClicks();
+    updateClickCounter(clickCounterElement, clickCounterObject);
+
+}
+
+function addAutoClicks() {
+    this._clicks = this._companion + this._clicks;
+}
 
 
 const updateClickCounter = (clickCounterElement, clickCounterObject) => {
