@@ -9,7 +9,8 @@ class ClickCounter {
 
     }
 
-    hamburgerMenu= () => {
+    hamburgerMenu = () => {
+        console.log("hamburger clicked");
         var options = document.getElementById("links");
         if (options.style.display === "block") {
           options.style.display = "none"; } 
