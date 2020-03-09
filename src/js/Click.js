@@ -9,6 +9,15 @@ class ClickCounter {
 
     }
 
+    hamburgerMenu= () => {
+        var options = document.getElementById("links");
+        if (options.style.display === "block") {
+          options.style.display = "none"; } 
+        else {
+          options.style.display = "block";
+             }
+    }
+
     addClick = () => {
         this._clicks += this._clickStrength;
 
