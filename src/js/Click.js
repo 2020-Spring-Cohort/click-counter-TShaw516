@@ -38,7 +38,7 @@ class ClickCounter {
         this._clicks = this._clicks - this._compounderCost;
         this._compounder += 1;
         this.compounderCostChange();
-        this.compounderStrengthChange();
+        this.clickStrengthChange();
         }
 
     }
@@ -47,7 +47,7 @@ class ClickCounter {
         this._compounderCost = (this._compounderCost * 0.1) + this._compounderCost;
     }
     
-    compounderStrengthChange(){
+    clickStrengthChange(){
         this._clickStrength = this._clickStrength + (this._clickStrength * .2);
 
     }
@@ -75,6 +75,10 @@ class ClickCounter {
 
     getCompounderCost = () => {
         return this._compounderCost;
+    }
+
+    getClickStrength = () => {
+        return this._clickStrength;
     }
 
 }

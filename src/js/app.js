@@ -19,7 +19,7 @@ const updateClickCounter = (clickCounterElement, clickCounterObject) => {
 }
 
 const updateClickStrength = (clickStrengthElement, clickCounterObject) => {
-    clickStrengthElement.innerText = clickCounterObject.updateClickStrength();
+    clickStrengthElement.innerText = clickCounterObject.getClickStrength();
 }
 
 const makeAddClickButton = (addClickElement, clickCounterElement, clickCounterObject) => {
