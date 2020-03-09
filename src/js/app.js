@@ -41,6 +41,7 @@ const makeAddCompanionButton = (addCompanionElement, companionCounterElement, cl
     addCompanionElement.addEventListener('click', ()=>{
         clickCounterObject.addClickCompanion();
         updateCompanionCounter(companionCounterElement, clickCounterObject);
+        updateCompanionCost(companionCostElement, appClickCounter);
     })
 }
 
@@ -56,6 +57,8 @@ const makeAddCompounderButton = (addCompounderElement, compounderCounterElement,
     addCompounderElement.addEventListener('click', ()=>{
         clickCounterObject.addClickCompounder();
         updateCompounderCounter(compounderCounterElement, clickCounterObject);
+        updateCompounderCost(compounderCostElement, appClickCounter);
+        updateClickStrength(clickStrengthElement, appClickCounter);
     })
 }
 
