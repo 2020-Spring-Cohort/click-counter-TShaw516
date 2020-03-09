@@ -12,15 +12,10 @@ const appClickCounter = new ClickCounter();
 
 const autoClickElement = setInterval(autoClick, 5000)
 function autoClick() {
-    clickCounterObject.addAutoClicks();
-    updateClickCounter(clickCounterElement, clickCounterObject);
+    appClickCounter.addAutoClicks();
+    updateClickCounter(clickCounterElement, appClickCounter);
 
 }
-
-function addAutoClicks() {
-    this._clicks = this._companion + this._clicks;
-}
-
 
 const updateClickCounter = (clickCounterElement, clickCounterObject) => {
     clickCounterElement.innerText = clickCounterObject.getClicks();
