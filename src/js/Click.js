@@ -5,44 +5,52 @@ class ClickCounter {
         this._compounder=0;
         this._companionCost=100;
         this._compounderCost=10;
+        this._clickStrength=1;
 
     }
 
-    addClick(){
-        this._clicks += 1;
+    addClick = () => {
+        this._clicks += this._clickStrength;
 
     }
     
     addClickCompanion(){
         if(this._clicks>=this._companionCost)
         {
-        this._clicks -= 100;
+        this._clicks = this._clicks - this._companionCost
         this._companion += 1;
-        //this.companionCostChange();
+        this.companionCostChange();
+        this.addAutoClicks();
         }
     }
 
     companionCostChange(){ 
-        Math.round(this._companionCost) = (this._companionCost / 10) + this.companionCost;
+        this._companionCost = (this._companionCost * 0.1) + this._companionCost;
     }
 
     addAutoClicks(){
-        this._clicks = this._companion + clicks;
+        this._clicks = this._companion + this._clicks;
     }
 
     addClickCompounder(){
         if(this._clicks>=this._compounderCost)
         {
-        this._clicks -= 10;
+        this._clicks = this._clicks - this._compounderCost;
         this._compounder += 1;
-        //this.compounderCostChange();
+        this.compounderCostChange();
+        this.compounderStrengthChange();
         }
 
     }
 
     compounderCostChange(){
-        Math.round(this._compounderCost) = (this._compounderCost / 10) + this._compounderCost;
-    }   
+        this._compounderCost = (this._compounderCost * 0.1) + this._compounderCost;
+    }
+    
+    compounderStrengthChange(){
+        this._clickStrength = this._clickStrength + (this._clickStrength * .2);
+
+    }
 
     getClickTotal(){
 

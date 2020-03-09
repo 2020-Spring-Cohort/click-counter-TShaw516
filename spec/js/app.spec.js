@@ -21,6 +21,12 @@ describe('app.js manipulates the DOM to reflect the status of a Car object.', ()
             updateClickCounter(testClickCounter, testClickProject); 
             expect(testClickCounter.innerText).toBe('1');
         });
+
+        it('After adding first compounder the click counter should reduce by the compounderCost.', () => {
+            testClickProject.addClickCompounder();
+            updateClickCounter(testClickCounter, testClickProject);
+            expect(testClickCounter.InnerText).toBe('0');
+        });
     });
 
     
