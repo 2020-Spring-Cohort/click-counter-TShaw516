@@ -72,6 +72,20 @@ describe('Clicking Project Tests:', () => {
         });
     });
 
+    describe('Companion count will be added automatically:', () => {
+        describe('When AutoAdd is used', function () {
+            it('Click count will increase by the companion amount', function (){
+                underTest._clicks = 10;
+                underTest._companion = 1
+                
+                underTest.addAutoClicks();
+
+                expect(underTest.getClicks()).toBe(11)
+            })
+        });
+    });
+
+
     
     
 });
