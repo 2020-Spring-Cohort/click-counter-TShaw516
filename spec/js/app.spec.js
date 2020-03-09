@@ -1,4 +1,4 @@
-describe('app.js manipulates the DOM to reflect the status of a Car object.', () => {
+describe('app.js manipulates the DOM to reflect the status of a clickProject object.', () => {
     let testClickProject;
     let testClickCounter;
     let testAddClick;

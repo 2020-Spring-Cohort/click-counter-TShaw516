@@ -3,6 +3,7 @@ describe('Clicking Project Tests:', () => {
     
     beforeEach(() => {
         underTest = new ClickCounter();
+        underTest._clicks = 0;
     })
 
     describe('Clicks should increment:', () => {
@@ -19,6 +20,8 @@ describe('Clicking Project Tests:', () => {
     describe('Clicking companion should increment:', () => { 
         describe('When addClickingCompanion is used,', () =>{
             it('Clicking Companion should increment by 1', function(){
+                underTest._clicks = 100;
+                
                 underTest.addClickCompanion();
 
                 expect(underTest.getCompanions()).toBe(1);
@@ -29,6 +32,8 @@ describe('Clicking Project Tests:', () => {
     describe('Clicking compounder should increment:', () => {
         describe('When addClickingCompounder is used', function (){
             it('Clicking Compounder should increment by 1', function (){
+                underTest._clicks = 10;
+                
                 underTest.addClickCompounder();
 
                 expect(underTest.getCompounders()).toBe(1);

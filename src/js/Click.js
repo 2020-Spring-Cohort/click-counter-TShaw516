@@ -73,7 +73,7 @@ class ClickCounter {
         return this._companionCost;
     }
 
-    getCompounderCost(){
+    getCompounderCost = () => {
         return this._compounderCost;
     }
 
