@@ -3,29 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Module 4 Project</title>
 </head>
 <body>
     <div class="container">
+        <div class = "menu">
+            <a href="index.html" class="active">Reset</a>
+            <div id="links"> 
+                <a href="#CooCoo"> CooCoo CC </a>
+                <a href="https://orteil.dashnet.org/cookieclicker/"> CookieClicker </a>
+                <a href="#contactMe"> Contact Me </a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="hamburgerMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <br>
         <section class="click-counter">
             <div class="click-counter__clicks"> Click Total </div>
+            <br>
         </section>
         <section class="add-click">
             <button class="add-click__add-click"> Add Click </button>
             <div class="add-click__click-strength"> Click Strength </div>
             <br>
+        </section>
         <section class="companion">
             <button class="companion__add-companion"> Add Companion </button>
             <div class = "companion__companion-cost"> Companion Cost </div>
             <div class="companion__companion-total"> Companion Total </div>
             <br>
+        </section>
         <section class="compounder">
             <button class="compounder__add-compounder"> Add Compounder </button>
             <div class="compounder__compounder-cost"> Compounder Cost </div>
             <div class="compounder__compounder-total"> Compounder Total </div>
+            <br>
         </section>
+        <section id="contactMe">
+        
+        </section>
+        <section id="CooCoo">
+        </section>
+
     </div>
     <script src="/src/js/Click.js"></script>
     <script src="/src/js/app.js"></script>
+    
 </body>
 </html>

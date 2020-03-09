@@ -7,6 +7,7 @@ const compounderCounterElement = document.querySelector('.compounder__compounder
 const companionCostElement = document.querySelector('.companion__companion-cost');
 const compounderCostElement = document.querySelector('.compounder__compounder-cost');
 const clickStrengthElement = document.querySelector('.add-click__click-strength');
+var links = document.getElementById("links");
 const appClickCounter = new ClickCounter();
 
 const autoClick = () =>{

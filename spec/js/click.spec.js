@@ -62,6 +62,30 @@ describe('Clicking Project Tests:', () => {
         });
     });
 
+    describe('Click strength will increase as compounders are added:', () => {
+        describe('When clickStrength is used', function () {
+            it('Click Strength will increase by 1.2x', function (){
+                underTest.clickStrengthChange();
+
+                expect(underTest.getClickStrength()).toBe(1.2)
+            })
+        });
+    });
+
+    describe('Companion count will be added automatically:', () => {
+        describe('When AutoAdd is used', function () {
+            it('Click count will increase by the companion amount', function (){
+                underTest._clicks = 10;
+                underTest._companion = 1
+                
+                underTest.addAutoClicks();
+
+                expect(underTest.getClicks()).toBe(11)
+            })
+        });
+    });
+
+
     
     
 });
